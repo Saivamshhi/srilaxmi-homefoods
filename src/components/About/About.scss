@@ -1,0 +1,23 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/animations" as *;
+
+.about {
+  @include scroll-entrance;
+  @include section-spacing;
+  @include container;
+  text-align: center;
+  background: $color-bg-light;
+
+  h2 {
+    font-family: $font-heading;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    max-width: 65ch;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: $color-text;
+  }
+}

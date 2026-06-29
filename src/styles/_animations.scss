@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+@mixin scroll-entrance {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity $transition-medium,
+    transform $transition-medium;
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,29 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/animations" as *;
+
+.gallery {
+  @include scroll-entrance;
+  @include section-spacing;
+  @include container;
+
+  h2 {
+    font-family: $font-heading;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $grid-gap;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

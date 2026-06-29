@@ -1,0 +1,80 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.image-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow $transition-fast;
+  aspect-ratio: 4 / 3;
+  background: #f0f0f0;
+
+  &:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform $transition-fast;
+  }
+
+  &:hover &__image {
+    transform: scale(1.05);
+  }
+
+  &__price-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 0.75rem;
+    background: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  &__name {
+    color: $color-text-light;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: block;
+  }
+
+  &__prices {
+    display: block;
+  }
+
+  &__price-text {
+    color: $color-text-light;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    @include mobile {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__price-separator {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__placeholder {
+    @include flex-center;
+    aspect-ratio: 4/3;
+    background: #e0e0e0;
+    color: $color-text;
+    font-size: 0.875rem;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
+  }
+}

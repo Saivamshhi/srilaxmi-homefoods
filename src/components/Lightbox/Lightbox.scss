@@ -1,0 +1,108 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.85);
+  @include flex-center;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  &__image {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+    text-align: center;
+  }
+
+  &__name {
+    color: $color-text-light;
+    font-family: $font-heading;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  &__price {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: $color-text-light;
+    font-size: 2rem;
+    cursor: pointer;
+    @include touch-target;
+
+    &:focus-visible {
+      outline: 2px solid $color-accent;
+      outline-offset: 2px;
+    }
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: $color-text-light;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+    @include touch-target;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-accent;
+      outline-offset: 2px;
+    }
+  }
+
+  &__prev {
+    left: -3.5rem;
+
+    @include mobile {
+      left: 0.5rem;
+    }
+  }
+
+  &__next {
+    right: -3.5rem;
+
+    @include mobile {
+      right: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: $color-primary;
+  padding: 0.75rem 0;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include container;
+
+    @include mobile {
+      justify-content: space-between;
+    }
+  }
+
+  &__brand {
+    font-family: $font-heading;
+    color: $color-text-light;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    @include mobile {
+      font-size: 1rem;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-accent;
+      outline-offset: 2px;
+    }
+  }
+
+  &__phone {
+    color: $color-text-light;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin-left: 1rem;
+    transition:
+      background $transition-fast,
+      color $transition-fast;
+    white-space: nowrap;
+
+    &:hover {
+      background: $color-accent;
+      border-color: $color-accent;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-accent;
+      outline-offset: 2px;
+    }
+
+    @include mobile {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.4rem;
+      margin-left: auto;
+      margin-right: 0.75rem;
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include touch-target;
+      background: none;
+      border: none;
+      color: $color-text-light;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 2px solid $color-accent;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+    margin-left: auto;
+
+    @include mobile {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: $color-primary;
+      padding: 0.5rem 0;
+      margin-left: 0;
+      order: 10;
+    }
+  }
+
+  &--open &__links {
+    @include mobile {
+      display: flex;
+    }
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    color: $color-text-light;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-accent;
+      outline-offset: 2px;
+    }
+  }
+}

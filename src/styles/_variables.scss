@@ -1,0 +1,29 @@
+// Colors
+$color-primary: #2c3e50;
+$color-accent: #e67e22;
+$color-bg-light: #fafafa;
+$color-bg-dark: #2c3e50;
+$color-text: #333333;
+$color-text-light: #ffffff;
+
+// Typography
+$font-heading: "Playfair Display", Georgia, serif;
+$font-body:
+  "Open Sans",
+  -apple-system,
+  BlinkMacSystemFont,
+  sans-serif;
+$font-mono: "Fira Code", monospace;
+
+// Spacing
+$section-padding: clamp(2rem, 5vw, 4rem);
+$container-max: 1200px;
+$grid-gap: 16px;
+
+// Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-desktop: 1024px;
+
+// Transitions
+$transition-fast: 300ms ease;
+$transition-medium: 500ms ease-out;

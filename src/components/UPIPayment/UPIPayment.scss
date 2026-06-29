@@ -1,0 +1,40 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/animations" as *;
+
+.upi-payment {
+  @include scroll-entrance;
+  @include section-spacing;
+  text-align: center;
+}
+
+.upi-payment__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.upi-payment__qr {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.upi-payment__id {
+  font-size: 1.125rem;
+  color: $color-text;
+}
+
+.upi-payment__id-text {
+  font-family: $font-mono;
+  user-select: all;
+}
+
+.upi-payment__fallback {
+  padding: 2rem;
+  background: $color-bg-light;
+  border-radius: 8px;
+  text-align: center;
+}
