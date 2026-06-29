@@ -14,7 +14,7 @@ const foodItems = [
   {
     id: 1,
     name: "Ariselu",
-    filename: "Ariselu.jpg",
+    filename:  "arisalu.jpg",
     alt: "Ariselu - traditional sweet rice flour snack",
     priceHalfKg: 200,
     pricePerKg: 400,
