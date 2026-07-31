@@ -149,7 +149,7 @@ const foodItems = [{    id: 1,
   {
   id: 15,
   name: "Murukku",
-  filename: "murukku.png",
+  filename: "Murukku.png",
   alt: "Murukku - crunchy fried rice flour snack",
   priceHalfKg: 200,
   pricePerKg: 400,
