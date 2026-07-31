@@ -146,6 +146,17 @@ const foodItems = [{    id: 1,
     width: 800,
     height: 600,
   },
+  {
+  id: 15,
+  name: "Murukku",
+  filename: "Murukku.jpg",
+  alt: "Murukku - crunchy fried rice flour snack",
+  priceHalfKg: 200,
+  pricePerKg: 400,
+  width: 800,
+  height: 600
+}
+
 ]
 
 export default foodItems
