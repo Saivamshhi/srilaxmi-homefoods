@@ -12,7 +12,7 @@
 
 const foodItems = [{    id: 1,
     name: "Laddu",
-    filename: "laddu.jpg",
+    filename: "laddu.png",
     alt: "Laddu - round gram flour sweet balls",
     priceHalfKg: 200,
     pricePerKg: 400,
@@ -68,7 +68,7 @@ const foodItems = [{    id: 1,
   {
     id: 7,
     name: "Avisaginjala Laddu",
-    filename: "avisagingala-laddu.jpg",
+    filename: "avisagingala-laddu.png",
     alt: "Avisagingala laddu - flaxseed sweet balls",
     priceHalfKg: 300,
     pricePerKg: 600,
